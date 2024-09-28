@@ -1,0 +1,13 @@
+function takeInput(fn)
+	local elm = document.getElementById("input")
+	elm:addEventListener("input", function()
+		fn(elm.value or "")
+	end)
+	if elm.value then
+		fn(elm.value)
+	end
+end
+
+function produceOutput(str)
+	document.getElementById("output").value = str
+end

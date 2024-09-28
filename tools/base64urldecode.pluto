@@ -1,0 +1,3 @@
+takeInput(function(input)
+	produceOutput(require"base64".urldecode(input))
+end)

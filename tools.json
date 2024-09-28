@@ -1,0 +1,22 @@
+[
+	{
+		"slug": "base64encode",
+		"name": "Base64 Encoder",
+		"related": ["base64decode", "base64urlencode", "base64urldecode"]
+	},
+	{
+		"slug": "base64decode",
+		"name": "Base64 Decoder",
+		"related": ["base64encode", "base64urlencode", "base64urldecode"]
+	},
+	{
+		"slug": "base64urlencode",
+		"name": "Base64url Encoder",
+		"related": ["base64urldecode", "base64encode", "base64decode" ]
+	},
+	{
+		"slug": "base64urldecode",
+		"name": "Base64url Decoder",
+		"related": ["base64urlencode", "base64encode", "base64decode" ]
+	}
+]
