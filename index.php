@@ -40,6 +40,7 @@ else
 	}
 
 	$slug = substr($_SERVER["REQUEST_URI"], 1);
+	$slug = strstr($slug, "#", true) ?: $slug;
 	$tool = getToolBySlug(strtolower($slug));
 	if (!$tool)
 	{
