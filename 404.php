@@ -33,7 +33,7 @@ if ($slug != $tool["slug"])
 http_response_code(200);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title><?=$tool["name"];?> | omnitool.app</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">

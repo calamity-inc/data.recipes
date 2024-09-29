@@ -2,7 +2,7 @@
 $tools = json_decode(file_get_contents("tools.json"), true);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>omnitool.app</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
