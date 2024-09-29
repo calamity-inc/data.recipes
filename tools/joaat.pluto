@@ -1,0 +1,3 @@
+takeInput(function(input)
+	produceOutput(require"crypto".joaat(input))
+end)

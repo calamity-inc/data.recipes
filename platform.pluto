@@ -1,16 +1,25 @@
 function takeInput(fn)
-	document.getElementById("input"):addEventListener("input", function()
+	local handler = function()
 		js_invoke("get_input")
 		fn(io.contents("input"))
-	end)
+	end
+
+	document.getElementById("input"):addEventListener("input", handler)
+	if tool.numeric then
+		document.getElementById("format"):addEventListener("input", handler)
+	end
 
 	js_invoke("get_input")
-	local value = io.contents("input")
-	if value ~= "" then
-		fn(value)
-	end
+	fn(io.contents("input"))
 end
 
-function produceOutput(str)
-	document.getElementById("output").value = str
+function produceOutput(data)
+	if tool.numeric then
+		-- Assuming we have an unsigned int here. Passing it on to Javascript will make it signed because WASM is 32-bit but using `tostring` produces the unsigned representation.
+		switch document.getElementById("format").value do
+			case "Decimal (Unsigned)": data = tostring(data) break
+			case "Hexadecimal (Unsigned)": data = string.format("%08X", data) break
+		end
+	end
+	document.getElementById("output").value = data
 end

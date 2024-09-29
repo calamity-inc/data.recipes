@@ -1,13 +1,35 @@
+const input = document.getElementById("input");
+const format = document.getElementById("format");
+
+// Apply state from hash
 const p = new URLSearchParams(location.hash.replace("#", ""));
 if (p.has("i"))
 {
-	document.getElementById("input").value = p.get("i");
+	input.value = p.get("i");
 }
-document.getElementById("input").addEventListener("input", function (event)
+if (p.has("f") && format)
 {
-	history.replaceState({}, undefined, event.target.value ? `#i=${encodeURIComponent(event.target.value)}` : location.pathname);
-});
+	format.value = p.get("f");
+}
 
+// Keep hash in sync with state
+const update_hash = function()
+{
+	const params = [];
+	if (input.value)
+	{
+		params.push("i="+encodeURIComponent(input.value));
+	}
+	if (format && format.value && format.value != "Decimal (Signed)")
+	{
+		params.push("f="+encodeURIComponent(format.value));
+	}
+	history.replaceState({}, undefined, params.length ? `#${params.join("&")}` : location.pathname);
+};
+input.addEventListener("input", update_hash);
+format?.addEventListener("input", update_hash);
+
+// Utility for Pluto code
 function get_input()
 {
 	pluto_give_file("input", document.getElementById("input").value)

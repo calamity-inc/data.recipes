@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_URI"] == "/")
 	</head>
 	<div class="container">
 		<script src="theme.js"></script>
-		<h1 class="mt-2">omnitool.app</h1>
+		<h1 class="mt-3">omnitool.app</h1>
 		<p>The following tools are currently available:</p>
 		<ul>
 			<?php foreach ($tools as $tool): ?>
@@ -65,12 +65,37 @@ else
 	</head>
 	<div class="container">
 		<script src="theme.js"></script>
-		<h1 class="mt-2"><?=$tool["name"];?></h1>
+
+		<h1 class="mt-3"><?=$tool["name"];?></h1>
+		<?php
+		if (array_key_exists("description", $tool))
+		{
+			?>
+			<p><?=$tool["description"];?></p>
+			<?php
+		}
+		?>
+
+		<script type="pluto">tool = {}</script>
+
 		<label for="input" class="form-label">Input</label>
-		<textarea id="input" class="form-control" style="height:calc(50vh - 150px)" autofocus></textarea>
+		<textarea id="input" class="form-control" style="height:calc(50vh - 160px)" autofocus></textarea>
+
+		<?php if (array_key_exists("numeric", $tool)): ?>
+			<label for="format" class="form-label mt-3">Output Format</label>
+			<select id="format" class="form-control">
+				<option>Decimal (Signed)</option>
+				<option>Decimal (Unsigned)</option>
+				<option>Hexadecimal (Unsigned)</option>
+			</select>
+
+			<script type="pluto">tool.numeric = true</script>
+		<?php endif; ?>
+
 		<label for="output" class="form-label mt-3">Output</label>
-		<textarea id="output" class="form-control" style="height:calc(50vh - 150px)" readonly></textarea>
-		<?php if ($tool["related"]): ?>
+		<textarea id="output" class="form-control" style="height:calc(50vh - 160px)" readonly></textarea>
+
+		<?php if (array_key_exists("related", $tool)): ?>
 			<h2 class="mt-3">Related Tools</h2>
 			<ul>
 				<?php foreach ($tool["related"] as $rslug): ?>
@@ -78,6 +103,7 @@ else
 				<?php endforeach; ?>
 			</ul>
 		<?php endif; ?>
+
 		<script src="https://pluto-lang.org/wasm-builds/out/libpluto/0.9.5/libpluto.js"></script>
 		<script src="https://pluto-lang.org/PlutoScript/plutoscript.js"></script>
 		<script src="platform.js"></script>

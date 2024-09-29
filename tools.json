@@ -18,5 +18,11 @@
 		"slug": "base64urldecode",
 		"name": "Base64url Decoder",
 		"related": ["base64urlencode", "base64encode", "base64decode" ]
+	},
+	{
+		"slug": "joaat",
+		"name": "JOAAT Hash Calculator",
+		"description": "This tool hashes your input using Bob Jenkin's one-at-a-time algorithm.",
+		"numeric": true
 	}
 ]
