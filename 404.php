@@ -40,6 +40,7 @@ http_response_code(200);
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <div class="container">
+	<script src="theme.js"></script>
 	<h1 class="mt-2"><?=$tool["name"];?></h1>
 	<label for="input" class="form-label">Input</label>
 	<textarea id="input" class="form-control" style="height:calc(50vh - 150px)" autofocus></textarea>
