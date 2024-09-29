@@ -1,10 +1,13 @@
 function takeInput(fn)
-	local elm = document.getElementById("input")
-	elm:addEventListener("input", function()
-		fn(elm.value or "")
+	document.getElementById("input"):addEventListener("input", function()
+		js_invoke("get_input")
+		fn(io.contents("input"))
 	end)
-	if elm.value then
-		fn(elm.value)
+
+	js_invoke("get_input")
+	local value = io.contents("input")
+	if value ~= "" then
+		fn(value)
 	end
 end
 
