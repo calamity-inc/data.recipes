@@ -2,26 +2,31 @@
 	{
 		"slug": "base64encode",
 		"name": "Base64 Encoder",
+		"category": "Encoding",
 		"related": ["base64decode", "base64urlencode", "base64urldecode"]
 	},
 	{
 		"slug": "base64decode",
 		"name": "Base64 Decoder",
+		"category": "Encoding",
 		"related": ["base64encode", "base64urlencode", "base64urldecode"]
 	},
 	{
 		"slug": "base64urlencode",
 		"name": "Base64url Encoder",
+		"category": "Encoding",
 		"related": ["base64urldecode", "base64encode", "base64decode" ]
 	},
 	{
 		"slug": "base64urldecode",
 		"name": "Base64url Decoder",
+		"category": "Encoding",
 		"related": ["base64urlencode", "base64encode", "base64decode" ]
 	},
 	{
 		"slug": "joaat",
 		"name": "JOAAT Hash Calculator",
+		"category": "Hashing",
 		"description": "This tool hashes your input using Bob Jenkin's one-at-a-time algorithm.",
 		"numeric": true
 	}
