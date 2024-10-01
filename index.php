@@ -1,5 +1,5 @@
 <?php
-$tools = json_decode(file_get_contents("tools.json"), true);
+$tools = json_decode(file_get_contents("tools/__manifest.json"), true);
 
 function getToolBySlug($slug)
 {
