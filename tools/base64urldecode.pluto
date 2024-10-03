@@ -1,3 +1,3 @@
-takeInput(function(input)
-	produceOutput(require"base64".urldecode(input))
+platform.watchinput(function(input)
+	platform.setoutput(require"base64".urldecode(input))
 end)

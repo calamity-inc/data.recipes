@@ -1,4 +1,6 @@
-function takeInput(fn)
+platform = {}
+
+function platform.watchinput(fn)
 	local handler = function()
 		js_invoke("get_input")
 		fn(io.contents("input"))
@@ -13,7 +15,7 @@ function takeInput(fn)
 	fn(io.contents("input"))
 end
 
-function produceOutput(data)
+function platform.setoutput(data)
 	if tool.numeric then
 		-- Assuming we have an unsigned int here. Passing it on to Javascript will make it signed because WASM is 32-bit but using `tostring` produces the unsigned representation.
 		switch document.getElementById("format").value do
