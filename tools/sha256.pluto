@@ -1,0 +1,3 @@
+platform.watchinput(function(input)
+	platform.setoutput(require"crypto".sha256(input))
+end)

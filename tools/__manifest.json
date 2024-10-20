@@ -53,5 +53,25 @@
 		"name": "Adler-32 Hash Calculator",
 		"category": "Hashing",
 		"numeric": true
+	},
+	{
+		"slug": "sha1",
+		"name": "SHA-1 Hash Calculator",
+		"category": "Hashing"
+	},
+	{
+		"slug": "sha256",
+		"name": "SHA-256 Hash Calculator",
+		"category": "Hashing"
+	},
+	{
+		"slug": "sha384",
+		"name": "SHA-384 Hash Calculator",
+		"category": "Hashing"
+	},
+	{
+		"slug": "sha512",
+		"name": "SHA-512 Hash Calculator",
+		"category": "Hashing"
 	}
 ]
