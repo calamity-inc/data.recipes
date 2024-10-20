@@ -89,5 +89,11 @@
 		"name": "RIPEMD-160 Hash Calculator",
 		"category": "Hashing",
 		"monospace": true
+	},
+	{
+		"slug": "qrcode",
+		"name": "QR Code Generator",
+		"category": "Visual",
+		"visual": true
 	}
 ]

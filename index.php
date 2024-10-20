@@ -138,7 +138,12 @@ else
 			<?php endif; ?>
 
 			<label for="output" class="form-label mt-3">Output</label>
-			<textarea id="output" class="form-control" style="height:calc(50vh - 180px)<?php if (array_key_exists("monospace", $tool)): ?>;font-family:monospace<?php endif; ?>" readonly></textarea>
+			<?php if (array_key_exists("visual", $tool)): ?>
+				<img id="output" style="display:block" />
+				<script type="pluto">tool.visual = true</script>
+			<?php else: ?>
+				<textarea id="output" class="form-control" style="height:calc(50vh - 180px)<?php if (array_key_exists("monospace", $tool)): ?>;font-family:monospace<?php endif; ?>" readonly></textarea>
+			<?php endif; ?>
 
 			<?php if (array_key_exists("related", $tool)): ?>
 				<h2 class="mt-3">Related Tools</h2>

@@ -1,0 +1,7 @@
+local canvas = require"canvas"
+
+platform.watchinput(function(input)
+	local c = canvas.qrcode(input, { border = 1 })
+	c:mulsize(5)
+	platform.setoutputpng(c:topng())
+end)

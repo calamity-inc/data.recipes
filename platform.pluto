@@ -25,3 +25,7 @@ function platform.setoutput(data)
 	end
 	document.getElementById("output").value = data
 end
+
+function platform.setoutputpng(data)
+	document.getElementById("output").src = "data:image/png;base64,"..(require"base64".encode(data))
+end
