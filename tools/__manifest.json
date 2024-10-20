@@ -47,5 +47,11 @@
 		"category": "Hashing",
 		"description": "This tool hashes your input using Bob Jenkin's one-at-a-time algorithm.",
 		"numeric": true
+	},
+	{
+		"slug": "adler32",
+		"name": "Adler-32 Hash Calculator",
+		"category": "Hashing",
+		"numeric": true
 	}
 ]
