@@ -34,8 +34,8 @@ if ($_SERVER["REQUEST_URI"] == "/")
 	<html lang="en">
 	<head>
 		<title>data.recipes</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 	</head>
 	<body>
 		<script src="theme.js"></script>
@@ -83,8 +83,8 @@ else
 	<html lang="en">
 	<head>
 		<title><?=$tool["name"];?> | data.recipes</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 	</head>
 	<body>
 		<script src="theme.js"></script>
@@ -138,7 +138,7 @@ else
 			<?php endif; ?>
 
 			<label for="output" class="form-label mt-3">Output</label>
-			<textarea id="output" class="form-control" style="height:calc(50vh - 180px)" readonly></textarea>
+			<textarea id="output" class="form-control" style="height:calc(50vh - 180px)<?php if (array_key_exists("monospace", $tool)): ?>;font-family:monospace<?php endif; ?>" readonly></textarea>
 
 			<?php if (array_key_exists("related", $tool)): ?>
 				<h2 class="mt-3">Related Tools</h2>
