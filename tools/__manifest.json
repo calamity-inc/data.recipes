@@ -36,6 +36,12 @@
 		"related": ["base32encode"]
 	},
 	{
+		"slug": "crc32",
+		"name": "CRC32 Hash Calculator",
+		"category": "Hashing",
+		"numeric": true
+	},
+	{
 		"slug": "joaat",
 		"name": "JOAAT Hash Calculator",
 		"category": "Hashing",
