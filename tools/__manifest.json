@@ -77,5 +77,11 @@
 		"name": "SHA-512 Hash Calculator",
 		"category": "Hashing",
 		"monospace": true
+	},
+	{
+		"slug": "md5",
+		"name": "MD5 Hash Calculator",
+		"category": "Hashing",
+		"monospace": true
 	}
 ]
