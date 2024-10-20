@@ -24,6 +24,18 @@
 		"related": ["base64urlencode", "base64encode", "base64decode" ]
 	},
 	{
+		"slug": "base32encode",
+		"name": "Base32 Encoder",
+		"category": "Encoding",
+		"related": ["base32decode"]
+	},
+	{
+		"slug": "base32decode",
+		"name": "Base32 Decoder",
+		"category": "Encoding",
+		"related": ["base32encode"]
+	},
+	{
 		"slug": "joaat",
 		"name": "JOAAT Hash Calculator",
 		"category": "Hashing",
