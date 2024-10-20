@@ -149,7 +149,7 @@ else
 				</ul>
 			<?php endif; ?>
 		</div>
-		<script src="https://pluto-lang.org/wasm-builds/out/libpluto/0.9.5/libpluto.js"></script>
+		<script src="vendor/libpluto.js"></script>
 		<script src="https://pluto-lang.org/PlutoScript/plutoscript.js"></script>
 		<script src="platform.js"></script>
 		<script type="pluto" src="platform.pluto"></script>

@@ -83,5 +83,11 @@
 		"name": "MD5 Hash Calculator",
 		"category": "Hashing",
 		"monospace": true
+	},
+	{
+		"slug": "ripemd160",
+		"name": "RIPEMD-160 Hash Calculator",
+		"category": "Hashing",
+		"monospace": true
 	}
 ]
