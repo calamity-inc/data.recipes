@@ -29,3 +29,15 @@ end
 function platform.setoutputpng(data)
 	document.getElementById("output").src = "data:image/png;base64,"..(require"base64".encode(data))
 end
+
+function platform.watchoutput(fn)
+	document.getElementById("output"):removeAttribute("readonly")
+	document.getElementById("output"):addEventListener("input", function()
+		js_invoke("get_output")
+		fn(io.contents("output"))
+	end)
+end
+
+function platform.setinput(data)
+	document.getElementById("input").value = data
+end

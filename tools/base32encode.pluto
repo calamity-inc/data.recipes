@@ -1,3 +1,7 @@
 platform.watchinput(function(input)
 	platform.setoutput(require"base32".encode(input))
 end)
+
+platform.watchoutput(function(output)
+	platform.setinput(require"base32".decode(output))
+end)

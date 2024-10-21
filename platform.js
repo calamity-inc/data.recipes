@@ -29,8 +29,13 @@ const update_hash = function()
 input.addEventListener("input", update_hash);
 format?.addEventListener("input", update_hash);
 
-// Utility for Pluto code
+// Utilities for Pluto code
 function get_input()
 {
 	pluto_give_file("input", document.getElementById("input").value)
+}
+
+function get_output()
+{
+	pluto_give_file("output", document.getElementById("output").value)
 }
